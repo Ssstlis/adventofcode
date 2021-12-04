@@ -23,7 +23,7 @@ class Day1Spec extends BaseStaticSpec with Load {
 
   "Day1#difficultRun" should {
     "run well" in {
-      load.map(Day1.difficultRun) mustBe Some(1266)
+      load.map(Day1.difficultRun) mustBe Some(1217)
     }
   }
 
