@@ -17,13 +17,13 @@ class Day3Spec extends BaseStaticSpec with Load {
 
   "Day3#exampleDifficultRun" should {
     "run well" in {
-      loadExample.map(Day3.difficultRun) mustBe Some(900)
+      loadExample.map(Day3.difficultRun) mustBe Some(BigInt(230))
     }
   }
 
   "Day3#difficultRun" should {
     "run well" in {
-      load.map(Day3.difficultRun) mustBe Some(1982495697)
+      load.map(Day3.difficultRun) mustBe Some(BigInt(7928162))
     }
   }
 
