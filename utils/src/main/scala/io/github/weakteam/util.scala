@@ -7,9 +7,9 @@ import scala.util.Try
 
 object util {
 
-  def repeatedSpan[T](iterable: Iterable[T])(pred: T => Boolean): Iterable[Iterable[T]] = {
+  def repeatedSpan[T](iterable: List[T])(pred: T => Boolean): Vector[List[T]] = {
     @tailrec
-    def loop(acc: Vector[Iterable[T]], rest: Iterable[T]): Iterable[Iterable[T]] =
+    def loop(acc: Vector[List[T]], rest: List[T]): Vector[List[T]] =
       rest.span(pred) match {
         case (Nil, _ :: rest) => loop(acc, rest)
         case (res, _ :: rest) => loop(acc :+ res, rest)
